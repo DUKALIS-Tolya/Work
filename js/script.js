@@ -22,7 +22,7 @@ const personalMovieDB = {
 
 function rememberMyFilms() {
     for (let i = 0; i < 2; i++) {
-        let a = prompt('Один из последних просмотренных фильмов?', ''),
+        const a = prompt('Один из последних просмотренных фильмов?', ''),
             b = prompt('На сколько оцените его?', '');
         
         if (a !== null && b !== null && a !== '' && b !== '' && a.length < 50) {
@@ -51,4 +51,20 @@ function detectPersonalLevel() {
 
 detectPersonalLevel();
 
-console.log(personalMovieDB);
+function showMyDB() {
+    if (personalMovieDB.private == false) {
+        console.log(personalMovieDB);
+    }
+}
+
+// showMyDB();
+
+function writeYourGenres() {
+    for (let i = 0; i < 3; i++) {
+        const a = +prompt('Ваш любимый жанр под номером', '');
+        personalMovieDB.genres[i] = a;
+    }
+}
+
+/* writeYourGenres();
+console.log(personalMovieDB.genres); */

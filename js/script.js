@@ -12,6 +12,14 @@ const personalMovieDB = {
     private: false
 };
 
+if(personalMovieDB.count < 10){
+    alert('Просмотрено довольно мало фильмов');
+}else if(personalMovieDB.count <=30){
+    alert('Вы классический зритель');
+}else{
+    alert('Произошла ошибка');
+}
+
 // console.log(personalMovieDB.count);
 
 /* const a = prompt('Один из последних просмотренных фильмов?', ''),
